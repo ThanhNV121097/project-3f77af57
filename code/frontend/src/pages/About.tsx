@@ -34,7 +34,7 @@ export default function About() {
         {/* The guide itself, as the proof: every place both of us went to. */}
         <aside className="mt-10 lg:col-span-5 lg:mt-0">
           <T k="about.walked.label" as="p" className="label text-ink-soft" />
-          <ul className="mt-3 grid grid-cols-2 gap-x-6 border-t border-line pt-3">
+          <ul className="mt-3 grid grid-cols-2 gap-x-6 border-t border-line pt-3 lg:grid-cols-1">
             {walked.map((d) => (
               <li key={d.id} className="flex items-baseline justify-between gap-3 border-b border-line py-2 text-sm">
                 <span className="truncate">{d.name}</span>
