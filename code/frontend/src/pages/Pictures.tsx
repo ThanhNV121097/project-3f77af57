@@ -29,7 +29,7 @@ export default function Pictures() {
       <ul className="mt-10 grid grid-cols-1 gap-px bg-[var(--line)] sm:grid-cols-2">
         {items.map((d, i) => (
           <li key={d.id} data-record={`destinations:${d.id}`} className="bg-ground">
-            <Reveal delay={(i % 3) * 0.06}>
+            <Reveal delay={(i % 2) * 0.06}>
               <Link to={`/destinations/${d.id}`} className="group block">
                 <span className="block aspect-[4/3] overflow-hidden">
                   <Picture
