@@ -43,18 +43,18 @@
     "region": "north",
     "kind": "countryside",
     "image": "/images/moc-chau.jpg",
-    "known_for": "A dairy and tea plateau at 1,050 m in Sơn La. Tea hills laid out in rings, plum orchards in the valleys, and almost no foreign visitors on an ordinary weekday.",
+    "known_for": "A dairy and tea plateau in Sơn La, in the northwest — they call it the white meadowland. Tea hills laid out in rings, plum orchards in the valleys, and almost no foreign visitors on an ordinary weekday.",
     "best_months": "January, and November",
     "best_note": "Plum blossom through late January and February; the white mustard flowers come in November.",
     "avoid": "June to August. The rain is constant and the plateau sits in haze, which is the one thing it has nothing to offer in.",
     "avoid_months": [6, 7, 8],
-    "getting_there": "Nội Bài (Hà Nội), then 220 km west on Highway 6 — about 4 hours by car or bus.",
+    "getting_there": "Nội Bài (Hà Nội), then west on Highway 6 through Hòa Bình — about 220 km from the airport, 4 to 5 hours by car or bus.",
     "airport": "Nội Bài (HAN)",
     "distance_km": 220,
-    "hours": 4,
+    "hours": 4.5,
     "days": 2,
     "opinion": "The best stop between Hà Nội and the northwest, and poor as a destination in itself.",
-    "_source": "assumed"
+    "_source": "web:https://en.wikipedia.org/wiki/M%E1%BB%99c_Ch%C3%A2u_(town)"
   },
   {
     "id": "ha-long",
