@@ -45,13 +45,13 @@
 .d1__h1 {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 500; font-size: 40px; line-height: 1.05; letter-spacing: -0.025em;
-  margin: 16px 0 10px; max-width: 18ch;
+  margin: 14px 0 9px; max-width: 18ch;
 }
-.d1__sub { font-size: 14px; line-height: 1.55; color: #6B675C; max-width: 56ch; }
+.d1__sub { font-size: 13.5px; line-height: 1.5; color: #6B675C; max-width: 56ch; }
 .d1__head {
   display: grid; grid-template-columns: 58px 1fr 196px 104px 62px;
   gap: 14px; align-items: end;
-  margin-top: 30px; padding-bottom: 7px;
+  margin-top: 24px; padding-bottom: 6px;
   font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #9C968A;
   border-bottom: 1px solid rgba(22, 21, 15, 0.14);
 }
