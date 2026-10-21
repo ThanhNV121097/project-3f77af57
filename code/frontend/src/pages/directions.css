@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&family=Instrument+Serif&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500&family=Inter:wght@400;500&display=swap');
+
+/* The direction pages. Not part of the site: no header, no footer, judged at
+   1440x790 and deleted when the owner has chosen. Desktop only, on purpose. */
+
+.dirtag {
+  position: fixed;
+  right: 16px;
+  bottom: 14px;
+  z-index: 10;
+  font-family: Inter, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 6px 10px;
+  border: 1px solid currentColor;
+  opacity: 0.6;
+}
+
+@keyframes dir-rise {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+.rise { animation: dir-rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+@media (prefers-reduced-motion: reduce) {
+  .rise { animation: none; }
+}
+
+/* ---------- 1. The whole country, one list ---------- */
+
+.d1 {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 432px;
+  background: #F4F1EA;
+  color: #16150F;
+  font-family: Inter, sans-serif;
+}
+.d1__main { padding: 48px 48px 36px 64px; display: flex; flex-direction: column; }
+.d1__kicker {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
+  color: #B4341F;
+}
+.d1__h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500; font-size: 40px; line-height: 1.05; letter-spacing: -0.025em;
+  margin: 16px 0 10px; max-width: 18ch;
+}
+.d1__sub { font-size: 14px; line-height: 1.55; color: #6B675C; max-width: 56ch; }
+.d1__head {
+  display: grid; grid-template-columns: 58px 1fr 196px 104px 62px;
+  gap: 14px; align-items: end;
+  margin-top: 30px; padding-bottom: 7px;
+  font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #9C968A;
+  border-bottom: 1px solid rgba(22, 21, 15, 0.14);
+}
+.d1__row {
+  display: grid; grid-template-columns: 58px 1fr 196px 104px 62px;
+  gap: 14px; align-items: baseline;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(22, 21, 15, 0.14);
+  transition: color 120ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.d1__row:hover { color: #B4341F; }
+.d1__row:hover .d1__num { color: #B4341F; }
+.d1__num {
+  font-family: "Space Grotesk", sans-serif; font-size: 20px; font-weight: 400;
+  font-variant-numeric: tabular-nums; color: #C4BCA9; letter-spacing: -0.02em;
+  transition: color 120ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.d1__name {
+  font-family: "Space Grotesk", sans-serif; font-size: 19px; font-weight: 500;
+  letter-spacing: -0.02em;
+}
+.d1__kind { font-size: 12.5px; color: #6B675C; }
+.d1__go { font-size: 13px; font-variant-numeric: tabular-nums; }
+.d1__days {
+  text-align: right; font-family: "Space Grotesk", sans-serif; font-size: 16px;
+  font-weight: 500; font-variant-numeric: tabular-nums;
+}
+.d1__foot {
+  margin-top: auto; padding-top: 18px; display: flex; gap: 28px; align-items: baseline;
+  font-size: 12.5px; color: #6B675C;
+}
+.d1__foot b { color: #16150F; font-weight: 500; }
+.d1__plate { position: relative; overflow: hidden; background: #16150F; }
+.d1__plate img {
+  width: 100%; height: 100%; object-fit: cover; object-position: 50% 46%;
+  filter: saturate(0.94) contrast(1.04);
+}
+.d1__cap {
+  position: absolute; left: 22px; right: 22px; bottom: 20px;
+  color: #F4F1EA; font-size: 12px; line-height: 1.5;
+  text-shadow: 0 1px 24px rgba(0, 0, 0, 0.65);
+}
+
+/* ---------- 2. Stand on the pass first ---------- */
+
+.d2 {
+  position: relative; min-height: 100vh; overflow: hidden;
+  background: #0C0D0B; color: #EFEDE4; font-family: Inter, sans-serif;
+}
+.d2__bg { position: absolute; inset: 0; }
+.d2__bg img {
+  width: 100%; height: 100%; object-fit: cover; object-position: 50% 44%;
+  filter: brightness(0.62) contrast(1.1) saturate(0.88);
+}
+.d2__scrim {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to top, rgba(12,13,11,0.94) 0%, rgba(12,13,11,0.5) 40%, rgba(12,13,11,0.1) 76%),
+    linear-gradient(to right, rgba(12,13,11,0.72), rgba(12,13,11,0) 58%);
+}
+.d2__body {
+  position: relative; min-height: 100vh; display: flex; flex-direction: column;
+  justify-content: space-between; padding: 44px 300px 52px 64px;
+}
+.d2__kicker {
+  display: flex; gap: 18px; align-items: baseline;
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #9C9B90;
+}
+.d2__kicker b { color: #E0A33C; font-weight: 500; }
+.d2__h1 {
+  font-family: "Instrument Serif", serif; font-weight: 400; font-size: 72px;
+  line-height: 1.0; letter-spacing: -0.02em; margin: 0 0 18px -4px;
+}
+.d2__lede { font-size: 18px; line-height: 1.5; max-width: 42ch; color: #EFEDE4; }
+.d2__op { margin-top: 12px; font-size: 14px; line-height: 1.55; max-width: 44ch; color: #9C9B90; }
+.d2__link {
+  display: inline-block; margin-top: 26px; font-size: 13px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: #E0A33C; border-bottom: 1px solid #E0A33C;
+  padding-bottom: 4px;
+}
+.d2__rail {
+  position: absolute; top: 0; right: 0; bottom: 0; width: 248px;
+  border-left: 1px solid rgba(239, 237, 228, 0.16);
+  display: flex; flex-direction: column; justify-content: center;
+  background: rgba(12, 13, 11, 0.42);
+}
+.d2__fact {
+  padding: 15px 24px; border-top: 1px solid rgba(239, 237, 228, 0.16);
+}
+.d2__fact:last-child { border-bottom: 1px solid rgba(239, 237, 228, 0.16); }
+.d2__fact span {
+  display: block; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: #9C9B90; margin-bottom: 6px;
+}
+.d2__fact strong {
+  font-family: "Instrument Serif", serif; font-weight: 400; font-size: 21px;
+  font-variant-numeric: tabular-nums; letter-spacing: -0.01em;
+}
+.d2__fact--warn strong { color: #E0A33C; }
+
+/* ---------- 3. Tell them when not to come ---------- */
+
+.d3 {
+  min-height: 100vh; display: flex; flex-direction: column;
+  background: #15514A; color: #F3F0E4; font-family: Inter, sans-serif;
+}
+.d3__strip { display: grid; grid-template-columns: repeat(4, 1fr); height: 252px; flex: none; }
+.d3__cell { position: relative; overflow: hidden; }
+.d3__cell img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: saturate(0.7) contrast(1.06) brightness(0.92);
+}
+.d3__cell::after {
+  content: ""; position: absolute; inset: 0; background: #15514A;
+  mix-blend-mode: multiply; opacity: 0.3;
+}
+.d3__cap {
+  position: absolute; left: 14px; bottom: 11px; z-index: 2;
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #F3F0E4;
+  text-shadow: 0 1px 16px rgba(0, 0, 0, 0.6);
+}
+.d3__body { flex: 1; padding: 36px 64px 34px; display: flex; flex-direction: column; }
+.d3__kicker {
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #F0C04B;
+}
+.d3__h1 {
+  font-family: "Bricolage Grotesque", sans-serif; font-weight: 500; font-size: 56px;
+  line-height: 1.02; letter-spacing: -0.03em; margin: 14px 0 10px;
+}
+.d3__sub { font-size: 14.5px; line-height: 1.55; color: #A9C0B8; max-width: 58ch; }
+.d3__rows { margin-top: 26px; border-top: 1px solid rgba(243, 240, 228, 0.18); }
+.d3__row {
+  display: grid; grid-template-columns: 186px 334px 1fr; gap: 26px; align-items: center;
+  padding: 13px 0; border-bottom: 1px solid rgba(243, 240, 228, 0.18);
+}
+.d3__place {
+  font-family: "Bricolage Grotesque", sans-serif; font-size: 22px; font-weight: 500;
+  letter-spacing: -0.02em;
+}
+.d3__place em { display: block; font-style: normal; font-family: Inter, sans-serif;
+  font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #A9C0B8; margin-top: 3px; }
+.d3__bar { display: grid; grid-template-columns: repeat(12, 1fr); gap: 3px; }
+.d3__m {
+  height: 24px; display: grid; place-items: center; font-size: 10px; font-weight: 500;
+  letter-spacing: 0.04em; color: #A9C0B8; border: 1px solid rgba(243, 240, 228, 0.22);
+}
+.d3__m--bad { background: #F0C04B; border-color: #F0C04B; color: #15514A; }
+.d3__why { font-size: 13.5px; line-height: 1.5; color: #F3F0E4; }
+.d3__foot {
+  margin-top: auto; padding-top: 20px; display: flex; gap: 30px;
+  font-size: 12.5px; color: #A9C0B8;
+}
+.d3__foot b { color: #F3F0E4; font-weight: 500; }
