@@ -77,7 +77,7 @@ export default function Letter() {
             </form>
           )}
 
-          <Reveal className="mt-14">
+          <Reveal className="mt-12">
             <p className="label text-ink-soft">{sampleLabel.label}</p>
             <h2 className="mt-2 text-[length:var(--size-h2)]">{sampleLabel.heading}</h2>
             <ul className="mt-4 border-t border-line">
@@ -91,6 +91,8 @@ export default function Letter() {
           </Reveal>
         </div>
 
+        {/* The right rail runs the whole first screen: this month's bad
+            months first, then the fourteen as the reason to want the letter. */}
         <aside className="mt-12 lg:col-span-5 lg:mt-0">
           <T k="letter.away.label" as="p" className="label text-ink-soft" />
           {bad.length > 0 ? (
@@ -112,6 +114,17 @@ export default function Letter() {
               className="mt-3 max-w-[40ch] border-t border-line pt-3 text-sm text-ink-soft"
             />
           )}
+          <p className="label mt-10 text-ink-soft">{awayLabel.rest}</p>
+          <ul className="mt-3 grid grid-cols-2 gap-x-6 border-t border-line pt-3">
+            {rest.map((d) => (
+              <li key={d.id} className="flex items-baseline justify-between gap-3 border-b border-line py-2 text-sm">
+                <span className="truncate text-ink-soft">{d.name}</span>
+                <span className="figures shrink-0 text-ink-soft">
+                  {d.days} {units.d}
+                </span>
+              </li>
+            ))}
+          </ul>
         </aside>
       </div>
     </div>
