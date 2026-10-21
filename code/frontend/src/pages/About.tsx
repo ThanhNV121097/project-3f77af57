@@ -77,23 +77,29 @@ export default function About() {
         <p className="label mb-2 text-ink-soft lg:mb-0 lg:pt-2">{v.label}</p>
         <div>
           <h2 className="text-[length:var(--size-h2)]">{v.heading}</h2>
-          <ul className="mt-6 border-t border-line">
-            {voices.map((q) => (
-              <li key={q.id} data-record={`voices:${q.id}`} className="flex items-start gap-4 border-b border-line py-5">
-                <Icon name="quote" size={18} className="mt-1 text-ink-soft" />
-                <span>
-                  <span className="block max-w-[56ch] text-lg">{q.quote || v.empty}</span>
-                  {(q.who || q.where) && (
-                    <span className="mt-2 block text-sm text-ink-soft">
-                      {q.who}
-                      {q.who && q.where ? " · " : ""}
-                      {q.where}
-                    </span>
-                  )}
-                </span>
-              </li>
-            ))}
-          </ul>
+          {said.length > 0 ? (
+            <ul className="mt-6 border-t border-line">
+              {said.map((q) => (
+                <li key={q.id} data-record={`voices:${q.id}`} className="flex items-start gap-4 border-b border-line py-5">
+                  <Icon name="quote" size={18} className="mt-1 text-ink-soft" />
+                  <span>
+                    <span className="block max-w-[56ch] text-lg">{q.quote}</span>
+                    {(q.who || q.where) && (
+                      <span className="mt-2 block text-sm text-ink-soft">
+                        {q.who}
+                        {q.who && q.where ? " · " : ""}
+                        {q.where}
+                      </span>
+                    )}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p data-record={`voices:${voices[0]?.id ?? "voice-1"}`} className="mt-6 max-w-[56ch] border-t border-line pt-5 text-ink-soft">
+              {v.empty}
+            </p>
+          )}
         </div>
       </Reveal>
     </div>
