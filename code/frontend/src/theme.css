@@ -80,3 +80,7 @@
     transition-duration: 0.001ms !important;
   }
 }
+
+/* agentteam:pictures — where each photo is held (the Studio writes this) */
+img[src="/images/ha-giang.jpg"] { object-position: 48% 0% !important; }
+/* /agentteam:pictures */
