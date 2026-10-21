@@ -105,13 +105,13 @@
     "best_note": "The rice at Tam Cốc turns gold for about ten days around the end of May. The rest of the spring is green and cool.",
     "avoid": "June to August — flat heat over open water with no shade on the boats.",
     "avoid_months": [6, 7, 8],
-    "getting_there": "Nội Bài (Hà Nội), then 120 km south, about 2 hours by road. The train from Hà Nội takes about 2 hours 15 to Ninh Bình station.",
+    "getting_there": "Nội Bài (Hà Nội), then south on the expressway — about 130 km from the airport, 2 hours by road. The Tràng An wharf is 7 km west of Ninh Bình town; the north–south train stops in the town.",
     "airport": "Nội Bài (HAN)",
-    "distance_km": 120,
+    "distance_km": 130,
     "hours": 2,
     "days": 2,
     "opinion": "Possible in a day from Hà Nội, and much better with a night in it.",
-    "_source": "assumed"
+    "_source": "web:https://en.wikipedia.org/wiki/Tr%C3%A0ng_An_Scenic_Landscape_Complex"
   },
   {
     "id": "phong-nha",
