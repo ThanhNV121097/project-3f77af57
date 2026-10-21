@@ -91,10 +91,10 @@ export default function Letter() {
           </Reveal>
         </div>
 
-        {bad.length > 0 && (
-          <aside className="mt-12 lg:col-span-5 lg:mt-0">
-            <T k="home.warnings.label" as="p" className="label text-ink-soft" />
-            <ul className="mt-3 border-t border-line">
+        <aside className="mt-12 lg:col-span-5 lg:mt-0">
+          <T k="letter.away.label" as="p" className="label text-ink-soft" />
+          {bad.length > 0 ? (
+            <ul data-testid="letter-away" className="mt-3 border-t border-line">
               {bad.map((d) => (
                 <li key={d.id} data-record={`destinations:${d.id}`} className="border-b border-line py-3">
                   <p className="font-display text-[22px] leading-none">{d.name}</p>
@@ -104,8 +104,15 @@ export default function Letter() {
                 </li>
               ))}
             </ul>
-          </aside>
-        )}
+          ) : (
+            <T
+              k="letter.away.none"
+              as="p"
+              data-testid="letter-away-none"
+              className="mt-3 max-w-[40ch] border-t border-line pt-3 text-sm text-ink-soft"
+            />
+          )}
+        </aside>
       </div>
     </div>
   );
