@@ -16,7 +16,6 @@ export default function Home() {
   const band = BAND.map((id) => items.find((d) => d.id === id)).filter(Boolean) as Destination[];
   const warnings = items.filter((d) => BAND.includes(d.id));
   const ctaLabel = useContent<string>("home.cta.label");
-  void kinds;
 
   return (
     <>
