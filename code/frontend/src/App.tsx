@@ -1,69 +1,164 @@
-import { useState } from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, Route, Routes, useLocation } from "react-router-dom";
 import { T, useList, useContent } from "./editable";
 import Home from "./pages/Home";
+import Destinations from "./pages/Destinations";
+import Destination from "./pages/Destination";
+import Pictures from "./pages/Pictures";
+import About from "./pages/About";
+import Letter from "./pages/Letter";
+import Contact from "./pages/Contact";
 import Logo from "./components/Logo";
 import MenuToggle from "./components/MenuToggle";
+import MobileMenu from "./components/MobileMenu";
 import ContactDock from "./components/ContactDock";
 import PhotoCredits from "./components/PhotoCredits";
-import { DirectionsOne, DirectionsTwo, DirectionsThree } from "./pages/Directions";
+import Icon from "./components/Icon";
+import { PageViews } from "./site";
 
-/**
- * The shell the design replaces.
- *
- * This file is a placeholder so the scaffold builds and runs before the
- * design exists. The team rewrites it and adds components under
- * src/components/; what must stay is the rule every component follows: the
- * words come from content.json through <T/>, the colours from theme.css.
- *
- * The site has pages, not only a home page: each is a file in src/pages/ and
- * a <Route> below, sharing the header and footer. The footer keeps
- * <PhotoCredits/>: the stock photos' credits, which their licences ask for.
- */
 export default function App() {
   return (
-    <Routes>
-      {/* Outside the shell on purpose: a direction seen through the
-          scaffold's placeholder header cannot be judged. */}
-      <Route path="/directions-1" element={<DirectionsOne />} />
-      <Route path="/directions-2" element={<DirectionsTwo />} />
-      <Route path="/directions-3" element={<DirectionsThree />} />
-      <Route path="*" element={<Shell />} />
-    </Routes>
+    <div className="min-h-screen bg-ground text-ink font-body">
+      <PageViews />
+      <ScrollToTop />
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/destinations" element={<Destinations />} />
+          <Route path="/destinations/:id" element={<Destination />} />
+          <Route path="/pictures" element={<Pictures />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/letter" element={<Letter />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </main>
+      <Footer />
+      <ContactDock />
+    </div>
   );
 }
 
-function Shell() {
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
+
+function Header() {
   const links = useList<{ label: string; href: string }>("nav.links");
-  const name = useContent("site.name");
+  const cta = useContent<{ label: string; href: string }>("nav.cta");
+  const name = useContent<string>("site.name");
   const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
   return (
-    <div className="min-h-screen bg-ground text-ink font-body">
-      <header className="mx-auto max-w-page px-[var(--gutter)] py-6 flex items-center justify-between">
-        <Link to="/" aria-label={name}><Logo /></Link>
-        <nav className="hidden lg:flex items-center gap-6 text-sm">
-          {links.map((l, i) => <T key={i} k={`nav.links.${i}.label`} as="a" href={l.href} />)}
-          <T k="nav.cta.label" as="a" href="#contact" className="rounded bg-accent px-4 py-2 text-accent-ink" />
+    <header className="sticky top-0 z-30 border-b border-line bg-ground">
+      <div className="mx-auto flex h-[var(--header-h)] max-w-page items-center justify-between px-[var(--gutter)]">
+        <Link to="/" aria-label={name} data-testid="nav-home">
+          <Logo />
+        </Link>
+        <nav className="hidden items-center gap-8 text-sm lg:flex">
+          {links.map((l, i) => (
+            <Link key={l.href} to={l.href} className="text-ink-soft transition-colors duration-[var(--duration-fast)] hover:text-ink">
+              <T k={`nav.links.${i}.label`} />
+            </Link>
+          ))}
+          <Link
+            to={cta.href}
+            data-testid="nav-contact"
+            className="inline-flex items-center gap-2 border border-ink px-4 py-2 text-ink transition-colors duration-[var(--duration-fast)] hover:bg-ink hover:text-ground"
+          >
+            <T k="nav.cta.label" />
+            <Icon name="next" size={16} />
+          </Link>
         </nav>
-        <div className="flex items-center gap-1 lg:hidden">
+        <div className="lg:hidden">
           <MenuToggle open={open} onToggle={() => setOpen((o) => !o)} />
         </div>
-      </header>
-      {open && (
-        <nav className="fixed inset-0 top-[88px] z-40 flex flex-col gap-6 bg-ground px-[var(--gutter)] py-10 text-2xl lg:hidden">
-          {links.map((l, i) => <T key={i} k={`nav.links.${i}.label`} as="a" href={l.href} />)}
+      </div>
+      <MobileMenu open={open} onClose={() => setOpen(false)}>
+        <div className="flex flex-col gap-6 px-[var(--gutter)] py-10 font-display text-3xl">
+          {links.map((l, i) => (
+            <Link key={l.href} to={l.href} onClick={() => setOpen(false)}>
+              <T k={`nav.links.${i}.label`} />
+            </Link>
+          ))}
+          <Link to={cta.href} onClick={() => setOpen(false)} data-testid="nav-contact-mobile" className="text-accent-ink">
+            <span className="inline-flex items-center gap-2 bg-ink px-4 py-2 text-ground">
+              <T k="nav.cta.label" />
+              <Icon name="next" size={18} />
+            </span>
+          </Link>
+        </div>
+      </MobileMenu>
+    </header>
+  );
+}
+
+function Footer() {
+  const name = useContent<string>("site.name");
+  const phone = useContent<string>("contact.phone");
+  const email = useContent<string>("contact.email");
+  const address = useContent<string>("contact.address");
+  const hours = useContent<string>("contact.hours");
+  return (
+    <footer className="mt-24 border-t border-line">
+      <div className="mx-auto grid max-w-page gap-10 px-[var(--gutter)] py-14 sm:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <Logo />
+          <T k="footer.line" as="p" className="mt-4 max-w-[34ch] text-sm text-ink-soft" />
+        </div>
+        <nav className="flex flex-col gap-2 text-sm">
+          <T k="footer.guide" className="label text-ink-soft" />
+          <Link to="/destinations" className="hover:text-accent-ink">
+            <T k="nav.links.0.label" />
+          </Link>
+          <Link to="/pictures">
+            <T k="nav.links.1.label" />
+          </Link>
+          <Link to="/letter">
+            <T k="footer.letter" />
+          </Link>
         </nav>
-      )}
-      <main className="mx-auto max-w-page px-[var(--gutter)] py-24">
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </main>
-      <footer className="mx-auto max-w-page px-[var(--gutter)] py-12 text-sm text-ink-soft border-t border-line">
-        <T k="footer.line" /> · {name}
-        <PhotoCredits className="mt-3" />
-      </footer>
-      <ContactDock />
-    </div>
+        <nav className="flex flex-col gap-2 text-sm">
+          <T k="footer.about" className="label text-ink-soft" />
+          <Link to="/about">
+            <T k="nav.links.2.label" />
+          </Link>
+          <Link to="/contact">
+            <T k="nav.cta.label" />
+          </Link>
+        </nav>
+        <div className="flex flex-col gap-2 text-sm">
+          <T k="footer.reach" className="label text-ink-soft" />
+          <a href={`tel:${phone.replace(/\s/g, "")}`} className="inline-flex items-center gap-2">
+            <Icon name="phone" size={16} />
+            <span className="figures">{phone}</span>
+          </a>
+          <a href={`mailto:${email}`} className="inline-flex items-center gap-2">
+            <Icon name="mail" size={16} />
+            {email}
+          </a>
+          <span className="inline-flex items-start gap-2 text-ink-soft">
+            <Icon name="address" size={16} className="mt-1" />
+            {address}
+          </span>
+          <span className="inline-flex items-center gap-2 text-ink-soft">
+            <Icon name="hours" size={16} />
+            {hours}
+          </span>
+        </div>
+      </div>
+      <div className="mx-auto max-w-page px-[var(--gutter)] pb-10 text-xs text-ink-soft">
+        <span>{name}</span>
+        <PhotoCredits className="mt-2" />
+      </div>
+    </footer>
   );
 }
