@@ -21,7 +21,8 @@ export default function Letter() {
   const sampleLabel = useContent<Record<string, string>>("letter.sample");
   const { items } = useCollection<Destination>("destinations", { pageSize: 14 });
   const thisMonth = new Date().getMonth() + 1;
-  const bad = items.filter((d) => d.avoid_months.includes(thisMonth)).slice(0, 4);
+  const thisMonthBad = items.filter((d) => d.avoid_months.includes(thisMonth));
+  const bad = [...thisMonthBad, ...items.filter((d) => !thisMonthBad.includes(d))].slice(0, 6);
 
   async function submit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
