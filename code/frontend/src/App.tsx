@@ -108,7 +108,7 @@ function Footer() {
   const address = useContent<string>("contact.address");
   const hours = useContent<string>("contact.hours");
   return (
-    <footer className="mt-24 border-t border-line">
+    <footer className="border-t border-line">
       <div className="mx-auto grid max-w-page gap-10 px-[var(--gutter)] py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <Logo />
