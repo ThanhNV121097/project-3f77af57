@@ -97,6 +97,8 @@ No file is used twice, and no two directions crop any file the same way.
 land-book.com (index density, hairline row rhythm) and are.na (type-first screens, numerals as
 structure). Structure and rhythm only — neither palette, neither type pairing.
 
+CHOSEN: Tell them when not to come — this guide sells nothing, so the only thing it has to trade on is being believed, and the half of its judgement nobody else publishes is the warning: the month the rain closes Mã Pì Lèng, the fortnight Hội An floods, the week every berth in Hạ Long is taken. Leading with the bad months rather than the postcard is the business's whole claim, drawn as one graphic that repeats on every place in the guide.
+
 ## Facts on these screens
 
 Months, distances, travel times and airports are checked, not invented. Where a thing is a
