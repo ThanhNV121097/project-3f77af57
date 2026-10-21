@@ -66,7 +66,9 @@ figures shift to yellow. Native scrolling, nothing pinned or scrubbed.
 
 ---
 
-## COMMITMENTS
+COMMITMENTS
+
+The eight visible decisions this design is held to:
 
 1. The first screen opens with a band of **four photographs edge to edge**, touching
    each other and both edges of the window, with no container margin — not a hero
