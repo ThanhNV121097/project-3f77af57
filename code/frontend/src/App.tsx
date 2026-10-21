@@ -89,7 +89,7 @@ function Header() {
               <T k={`nav.links.${i}.label`} />
             </Link>
           ))}
-          <Link to={cta.href} onClick={() => setOpen(false)} data-testid="nav-contact-mobile" className="text-accent-ink">
+          <Link to={cta.href} onClick={() => setOpen(false)} data-testid="nav-contact-mobile">
             <span className="inline-flex items-center gap-2 bg-ink px-4 py-2 text-ground">
               <T k="nav.cta.label" />
               <Icon name="next" size={18} />
