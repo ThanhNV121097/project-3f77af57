@@ -30,13 +30,16 @@ export default function Home() {
     <>
       {/* COMMITMENT 1: four photographs edge to edge, touching, no container. */}
       <section className="border-b border-line">
-        <div className="grid grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-2 lg:h-[46vh] lg:min-h-[300px] lg:grid-cols-6">
           {band.map((d, i) => (
             <Link
               key={d.id}
               to={`/destinations/${d.id}`}
               style={{ animationDelay: `${i * 80}ms` }}
-              className="band-in group relative block aspect-[4/3] overflow-hidden"
+              className={[
+                "band-in group relative block aspect-[3/2] overflow-hidden lg:aspect-auto lg:h-full",
+                i === 0 ? "col-span-2 lg:col-span-3" : "lg:col-span-1",
+              ].join(" ")}
             >
               <Picture
                 src={d.image}
