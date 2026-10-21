@@ -23,7 +23,9 @@ export default function Pictures() {
           <T k="pictures.headline" />
         </h1>
         <T k="pictures.sub" as="p" className="mt-4 max-w-[52ch] text-ink-soft" />
-        <p className="figures mt-4 text-sm text-ink-soft">{total}</p>
+        <p className="figures mt-4 text-sm text-ink-soft">
+          {total} <T k="pictures.count" />
+        </p>
       </div>
 
       <ul className="mt-10 grid grid-cols-1 gap-px bg-[var(--line)] sm:grid-cols-2">
