@@ -173,7 +173,7 @@
   font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #F3F0E4;
   text-shadow: 0 1px 16px rgba(0, 0, 0, 0.6);
 }
-.d3__body { flex: 1; padding: 36px 64px 34px; display: flex; flex-direction: column; }
+.d3__body { flex: 1; padding: 32px 64px 30px; display: flex; flex-direction: column; }
 .d3__kicker {
   font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #F0C04B;
 }
