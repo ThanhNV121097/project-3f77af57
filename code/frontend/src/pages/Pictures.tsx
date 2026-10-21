@@ -31,7 +31,7 @@ export default function Pictures() {
           <li key={d.id} data-record={`destinations:${d.id}`} className="bg-ground">
             <Reveal delay={(i % 2) * 0.06}>
               <Link to={`/destinations/${d.id}`} className="group block">
-                <span className="block aspect-[4/3] overflow-hidden">
+                <span className="block aspect-[3/2] overflow-hidden">
                   <Picture
                     src={d.image}
                     alt={d.name}
