@@ -22,11 +22,27 @@ export default function About() {
 
   return (
     <div className="mx-auto max-w-page px-[var(--gutter)] py-12">
-      <T k="about.eyebrow" as="p" className="label text-ink-soft" />
-      <h1 className="mt-3 max-w-[16ch] text-[length:var(--size-h1)]">
-        <T k="about.headline" />
-      </h1>
-      <T k="about.sub" as="p" className="mt-4 max-w-[56ch] text-ink-soft" />
+      <div className="lg:grid lg:grid-cols-12 lg:gap-12">
+        <div className="lg:col-span-7">
+          <T k="about.eyebrow" as="p" className="label text-ink-soft" />
+          <h1 className="mt-3 max-w-[16ch] text-[length:var(--size-h1)]">
+            <T k="about.headline" />
+          </h1>
+          <T k="about.sub" as="p" className="mt-4 max-w-[56ch] text-ink-soft" />
+        </div>
+        {/* The guide itself, as the proof: every place both of us went to. */}
+        <aside className="mt-10 lg:col-span-5 lg:mt-0">
+          <T k="about.walked.label" as="p" className="label text-ink-soft" />
+          <ul className="mt-3 grid grid-cols-2 gap-x-6 border-t border-line pt-3">
+            {walked.map((d) => (
+              <li key={d.id} className="flex items-baseline justify-between gap-3 border-b border-line py-2 text-sm">
+                <span className="truncate">{d.name}</span>
+                <span className="figures shrink-0 text-ink-soft">{d.days} d</span>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      </div>
 
       <Reveal className="mt-16 lg:grid lg:grid-cols-[120px_1fr] lg:gap-8">
         <T k="about.story.label" as="p" className="label mb-2 text-ink-soft lg:mb-0 lg:pt-2" />
