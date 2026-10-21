@@ -121,7 +121,8 @@
     "promise": "One letter a month. Nothing else, and no sharing of your address.",
     "away": {
       "label": "Stay away this month, in",
-      "none": "None of the fourteen is in a bad month this month. Anywhere on the list is fair."
+      "none": "None of the fourteen is in a bad month this month. Anywhere on the list is fair.",
+      "rest": "Fair this month"
     },
     "sample": { "label": "What is in it", "heading": "A letter is four lines", "items": [
       { "line": "The three places in their best month, and why." },
