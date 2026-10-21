@@ -158,5 +158,8 @@
     "letter": "The monthly letter"
   },
   "credits": { "label": "Photos" },
-  "months": { "short": ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"] }
+  "months": {
+    "short": ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"],
+    "long": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+  }
 }
