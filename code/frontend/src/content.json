@@ -102,6 +102,7 @@
       "body": "Every entry here is a place we have both been to. The months come from being there in the wrong one at least once. Where a thing is a matter of taste — how long to stay, which end of an island to sleep on — we say so and sign our name to it.",
       "body2": "We do not sell trips and we take no commission on anything you book. If a place is not worth your fortnight we would rather say so than fill a page."
     },
+    "walked": { "label": "All fourteen, both of us" },
     "team": { "label": "The two of us", "heading": "The people who went", "empty": "A name, a photograph and a few lines — the owners add these." },
     "voices": { "label": "Readers", "heading": "What readers tell us", "empty": "A line from a reader who used the guide — the owners add these once they have them." }
   },
