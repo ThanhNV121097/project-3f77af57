@@ -21,6 +21,19 @@ import { DirectionsOne, DirectionsTwo, DirectionsThree } from "./pages/Direction
  * <PhotoCredits/>: the stock photos' credits, which their licences ask for.
  */
 export default function App() {
+  return (
+    <Routes>
+      {/* Outside the shell on purpose: a direction seen through the
+          scaffold's placeholder header cannot be judged. */}
+      <Route path="/directions-1" element={<DirectionsOne />} />
+      <Route path="/directions-2" element={<DirectionsTwo />} />
+      <Route path="/directions-3" element={<DirectionsThree />} />
+      <Route path="*" element={<Shell />} />
+    </Routes>
+  );
+}
+
+function Shell() {
   const links = useList<{ label: string; href: string }>("nav.links");
   const name = useContent("site.name");
   const [open, setOpen] = useState(false);
