@@ -118,6 +118,10 @@
     "sending": "Signing up…",
     "done": "You are on the list. The letter goes out on the first of the month.",
     "promise": "One letter a month. Nothing else, and no sharing of your address.",
+    "away": {
+      "label": "Stay away this month, in",
+      "none": "None of the fourteen is in a bad month this month. Anywhere on the list is fair."
+    },
     "sample": { "label": "What is in it", "heading": "A letter is four lines", "items": [
       { "line": "The three places in their best month, and why." },
       { "line": "The one place to stay away from, and for how long." },
