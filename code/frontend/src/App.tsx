@@ -6,6 +6,7 @@ import Logo from "./components/Logo";
 import MenuToggle from "./components/MenuToggle";
 import ContactDock from "./components/ContactDock";
 import PhotoCredits from "./components/PhotoCredits";
+import { DirectionsOne, DirectionsTwo, DirectionsThree } from "./pages/Directions";
 
 /**
  * The shell the design replaces.
