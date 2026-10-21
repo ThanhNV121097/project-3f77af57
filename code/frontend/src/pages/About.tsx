@@ -17,6 +17,7 @@ export default function About() {
   usePageMeta("about.title", "about.description");
   const { items: team } = useCollection<Person>("team", { pageSize: 4 });
   const { items: voices } = useCollection<Voice>("voices", { pageSize: 6 });
+  const { items: walked } = useCollection<{ id: string; name: string; days: number }>("destinations", { pageSize: 14 });
   const t = useContent<Record<string, string>>("about.team");
   const v = useContent<Record<string, string>>("about.voices");
 
