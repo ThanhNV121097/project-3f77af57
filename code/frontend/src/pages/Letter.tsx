@@ -25,6 +25,9 @@ export default function Letter() {
   // padded: a warning that names a place that is fine is the one thing a
   // guide trading on the honest half cannot do.
   const bad = items.filter((d) => d.avoid_months.includes(thisMonth));
+  const rest = items.filter((d) => !d.avoid_months.includes(thisMonth));
+  const awayLabel = useContent<Record<string, string>>("letter.away");
+  const units = useContent<Record<string, string>>("destination.units");
 
   async function submit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
