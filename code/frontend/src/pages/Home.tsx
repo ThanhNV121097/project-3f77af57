@@ -12,7 +12,6 @@ const BAND = ["ha-giang", "hoi-an", "con-dao", "moc-chau"];
 
 export default function Home() {
   const { items } = useCollection<Destination>("destinations", { pageSize: 14 });
-  const kinds = useList<Facet>("home.kinds.items");
   const { items: kindRows } = useCollection<Facet>("kinds", { pageSize: 5 });
   const band = BAND.map((id) => items.find((d) => d.id === id)).filter(Boolean) as Destination[];
   const warnings = items.filter((d) => BAND.includes(d.id));
