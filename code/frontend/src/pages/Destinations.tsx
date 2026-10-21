@@ -23,6 +23,7 @@ export default function Destinations() {
   const { items: kinds } = useCollection<Facet>("kinds", { pageSize: 6 });
   const cols = useContent<Record<string, string>>("destinations.columns");
   const f = useContent<Record<string, string>>("destinations.filters");
+  const units = useContent<Record<string, string>>("destination.units");
 
   const shown = useMemo(
     () => items.filter((d) => (!region || d.region === region) && (!kind || d.kind === kind)),
