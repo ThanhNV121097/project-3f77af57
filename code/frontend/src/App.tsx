@@ -128,10 +128,10 @@ function Footer() {
         </nav>
         <nav className="flex flex-col gap-2 text-sm">
           <T k="footer.about" className="label text-ink-soft" />
-          <Link to="/about">
+          <Link to="/about" className="text-ink-soft hover:text-ink">
             <T k="nav.links.2.label" />
           </Link>
-          <Link to="/contact">
+          <Link to="/contact" className="text-ink-soft hover:text-ink">
             <T k="nav.cta.label" />
           </Link>
         </nav>
