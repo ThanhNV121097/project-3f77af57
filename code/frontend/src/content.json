@@ -81,7 +81,7 @@
       "cta": "See all fourteen"
     },
     "figures": { "airport": "Nearest airport", "distance": "Distance", "hours": "Travel time", "days": "Days" },
-    "units": { "km": "km", "h": "h", "days": "days" }
+    "units": { "km": "km", "h": "h", "d": "d", "days": "days" }
   },
   "pictures": {
     "title": "Pictures",
