@@ -168,7 +168,7 @@
     "hours": 0.75,
     "days": 3,
     "opinion": "Walk the old town before seven in the morning. After nine it belongs to the tour groups.",
-    "_source": "assumed"
+    "_source": "web:https://en.wikipedia.org/wiki/H%E1%BB%99i_An"
   },
   {
     "id": "quy-nhon",
