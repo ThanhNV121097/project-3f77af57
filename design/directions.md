@@ -87,7 +87,7 @@ own pictures arrive — they have been to all fourteen places and will have bett
 | `ha-giang.jpg` | 2 | full-bleed 16:9, focal on the valley floor (50% 44%), −38% brightness |
 | `ha-long.jpg` | 3 | strip cell 4:3, focal right (64% 52%) |
 | `ninh-binh.jpg` | 3 | strip cell 4:3, focal low (50% 64%) |
-| `hoi-an.jpg` | 3 | strip cell 4:3 from a portrait file, focal upper (50% 38%) |
+| `hoi-an-street.jpg` | 3 | strip cell 4:3 from a 3:2 file, focal centre (50% 50%) |
 | `phu-quoc.jpg` | 3 | strip cell 4:3, focal on the horizon (50% 42%) |
 
 No file is used twice, and no two directions crop any file the same way.
