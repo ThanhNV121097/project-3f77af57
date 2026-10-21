@@ -10,17 +10,17 @@ import { Picture } from "../picture";
 /** The four places across the top band, in the order the first screen shows them. */
 const BAND = ["ha-giang", "hoi-an", "con-dao", "moc-chau"];
 
-/** "Jun–Aug" from the month numbers, in the content's own month letters. */
-function monthRange(avoid: number[]): string {
+/** "Jun–Aug" from the month numbers, in the month names content.json carries. */
+function monthRange(avoid: number[], names: string[]): string {
   if (avoid.length === 0) return "";
-  const full = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-  const first = full[avoid[0] - 1];
-  const last = full[avoid[avoid.length - 1] - 1];
+  const first = names[avoid[0] - 1];
+  const last = names[avoid[avoid.length - 1] - 1];
   return avoid.length === 1 ? first : `${first}–${last}`;
 }
 
 export default function Home() {
   const { items } = useCollection<Destination>("destinations", { pageSize: 14 });
+  const monthNames = useContent<string[]>("months.long");
   const { items: kindRows } = useCollection<Facet>("kinds", { pageSize: 5 });
   const band = BAND.map((id) => items.find((d) => d.id === id)).filter(Boolean) as Destination[];
   const warnings = items.filter((d) => BAND.includes(d.id));
