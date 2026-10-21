@@ -66,27 +66,14 @@ figures shift to yellow. Native scrolling, nothing pinned or scrubbed.
 
 ---
 
-COMMITMENTS
+## COMMITMENTS
 
-The eight visible decisions this design is held to:
-
-1. The first screen opens with a band of **four photographs edge to edge**, touching
-   each other and both edges of the window, with no container margin — not a hero
-   picture in a box.
-2. **The twelve-month bar** — twelve cells labelled J F M A M J J A S O N D, the months
-   to stay away filled solid `#F0C04B` — appears on the home page, on every row of the
-   index and at the top of every destination page. It is the one device, and it repeats.
-3. **Yellow is only ever a warning.** No button, no link, no heading uses `--accent`;
-   the only yellow on the site is an avoid month, an avoid line, or the icon beside one.
-4. The index of all fourteen is a **hairline-ruled table**, one rule per row, with the
-   figure column (days / hours / km) **right-aligned** so the digits line up — not a
-   grid of cards.
-5. Filtering the index shows a **running total in days** for the current filter
-   ("3 places · 10 days"), so a reader with twelve days and a taste for mountains can
-   see their trip in one number.
-6. Every destination page leads with its photograph **full-bleed to both edges at
-   56vh**, with the place's name and region overlaid at the bottom left.
-7. The **avoid line sits above the fold** on every destination page, in yellow, before
-   anything good is said about the place.
+- The first screen opens with a band of four photographs edge to edge, touching each other and both edges of the window, with no container margin — not a hero picture in a box.
+- The twelve-month bar — twelve cells, the months to stay away filled solid #F0C04B — appears on the home page, on every row of the index and at the top of every destination page.
+- Yellow is only ever a warning: no button, no link and no heading uses the accent; the only yellow on the site is an avoid month, an avoid line or the icon beside one.
+- The index of all fourteen is a hairline-ruled table, one rule per row, with the figure column (days, hours, km) right-aligned so the digits line up — not a grid of cards.
+- Filtering the index shows a running total in days for the current filter ("3 places · 10 days").
+- Every destination page leads with its photograph full-bleed to both edges at 56vh, with the place's name and region overlaid at the bottom left.
+- The avoid line sits above the fold on every destination page, in yellow, before anything good is said about the place.
 8. Section headings are **small-caps labels in the left margin** at 1180px and wider,
    beside their text rather than above it.
