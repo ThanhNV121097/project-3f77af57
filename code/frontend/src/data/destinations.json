@@ -225,7 +225,7 @@
     "hours": 3.5,
     "days": 2,
     "opinion": "Two days unless you kite, in which case stay a fortnight.",
-    "_source": "assumed"
+    "_source": "web:https://en.wikipedia.org/wiki/M%C5%A9i_N%C3%A9"
   },
   {
     "id": "phu-quoc",
