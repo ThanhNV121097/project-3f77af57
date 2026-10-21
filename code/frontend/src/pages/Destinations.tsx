@@ -102,8 +102,15 @@ export default function Destinations() {
                     <MonthBar avoid={d.avoid_months} label={`${d.name}: ${d.avoid}`} />
                   </span>
                   <span className="figures text-sm text-ink-soft">{d.airport}</span>
-                  <span className="figures text-sm text-ink-soft lg:text-right">{d.hours} h</span>
-                  <span className="figures text-sm lg:text-right">{d.days} d</span>
+                  <span className="figures text-sm text-ink-soft lg:text-right">
+                    {d.distance_km} {units.km}
+                  </span>
+                  <span className="figures text-sm text-ink-soft lg:text-right">
+                    {d.hours} {units.h}
+                  </span>
+                  <span className="figures text-sm lg:text-right">
+                    {d.days} {units.d}
+                  </span>
                 </Link>
               </li>
             ))}
