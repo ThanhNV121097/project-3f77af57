@@ -183,7 +183,7 @@ export function DirectionsThree() {
   const strip = [
     { src: "/images/ha-long.jpg", alt: "Limestone towers in Hạ Long Bay", cap: "Hạ Long", pos: "64% 52%" },
     { src: "/images/ninh-binh.jpg", alt: "Ripe rice between karst hills at Tam Cốc", cap: "Ninh Bình", pos: "50% 64%" },
-    { src: "/images/hoi-an.jpg", alt: "Lantern-lit lane in the Hội An old town", cap: "Hội An", pos: "50% 38%" },
+    { src: "/images/hoi-an-street.jpg", alt: "A wet street in the Hội An old town after rain", cap: "Hội An", pos: "50% 50%" },
     { src: "/images/phu-quoc.jpg", alt: "Shoreline and sea on Phú Quốc", cap: "Phú Quốc", pos: "50% 42%" },
   ];
 
