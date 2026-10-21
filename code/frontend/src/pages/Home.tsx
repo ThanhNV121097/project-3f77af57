@@ -38,7 +38,7 @@ export default function Home() {
               style={{ animationDelay: `${i * 80}ms` }}
               className={[
                 "band-in group relative block aspect-[3/2] overflow-hidden lg:aspect-auto lg:h-full",
-                i === 0 ? "col-span-2 lg:col-span-3" : "lg:col-span-1",
+                i === 0 ? "lg:col-span-3" : "lg:col-span-1",
               ].join(" ")}
             >
               <Picture
