@@ -90,7 +90,7 @@ export default function Destinations() {
                 <Link
                   to={`/destinations/${d.id}`}
                   data-testid={`row-${d.id}`}
-                  className="group grid grid-cols-1 gap-3 py-5 lg:grid-cols-[1fr_200px_104px_64px_56px] lg:items-center lg:gap-6"
+                  className="group grid grid-cols-1 gap-3 py-5 lg:grid-cols-[1fr_200px_104px_56px_56px_56px] lg:items-center lg:gap-6"
                 >
                   <span className="flex min-w-0 flex-col gap-1">
                     <span className="font-display text-[22px] leading-none transition-colors duration-[var(--duration-fast)] group-hover:text-ink-soft">
