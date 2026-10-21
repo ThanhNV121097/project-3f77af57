@@ -75,5 +75,4 @@ figures shift to yellow. Native scrolling, nothing pinned or scrubbed.
 - Filtering the index shows a running total in days for the current filter ("3 places · 10 days").
 - Every destination page leads with its photograph full-bleed to both edges at 56vh, with the place's name and region overlaid at the bottom left.
 - The avoid line sits above the fold on every destination page, in yellow, before anything good is said about the place.
-8. Section headings are **small-caps labels in the left margin** at 1180px and wider,
-   beside their text rather than above it.
+- Section headings are small-caps labels in the left margin at 1180px and wider, beside their text rather than above it.
