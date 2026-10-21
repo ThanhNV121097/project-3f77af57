@@ -88,7 +88,7 @@ export default function Home() {
                     <Link to={`/destinations/${d.id}`} className="font-display text-[22px] leading-none hover:text-ink-soft">
                       {d.name}
                     </Link>
-                    <span className="figures label text-accent">{monthRange(d.avoid_months, months)}</span>
+                    <span className="figures label text-accent">{monthRange(d.avoid_months)}</span>
                   </div>
                   <div className="mt-2">
                     <MonthBar avoid={d.avoid_months} label={`${d.name}: ${d.avoid}`} />
