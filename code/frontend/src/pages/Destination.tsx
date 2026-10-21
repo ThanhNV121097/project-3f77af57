@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { T, useContent } from "../editable";
 import { useCollection, useRecord } from "../data";
-import { usePageMeta } from "../seo";
+import { useRecordMeta } from "../seo";
 import type { Destination as Place, Facet } from "../lib/types";
 import MonthBar from "../components/MonthBar";
 import Reveal from "../components/Reveal";
