@@ -88,7 +88,8 @@
     "description": "One photograph from each of the fourteen places in the guide.",
     "eyebrow": "Fourteen places",
     "headline": "One picture each.",
-    "sub": "Taken on the ground, in the month we say to go. Click one to read the place.",
+    "sub": "One picture for each place, until our own are up here. Click one to read the place.",
+    "count": "places",
     "missing": "A photograph the owners took here"
   },
   "about": {
