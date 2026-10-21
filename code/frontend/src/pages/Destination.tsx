@@ -109,7 +109,7 @@ export default function Destination() {
               {nearby.map((d) => (
                 <li key={d.id} data-record={`destinations:${d.id}`}>
                   <Link to={`/destinations/${d.id}`} className="group block">
-                    <span className="block aspect-[4/3] overflow-hidden">
+                    <span className="block aspect-[3/2] overflow-hidden">
                       <Picture
                         src={d.image}
                         alt={d.name}
