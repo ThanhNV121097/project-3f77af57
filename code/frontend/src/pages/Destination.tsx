@@ -22,7 +22,7 @@ export default function Destination() {
   const labels = useContent<Record<string, string>>("destination");
   const figures = useContent<Record<string, string>>("destination.figures");
   const units = useContent<Record<string, string>>("destination.units");
-  usePageMeta("destinations.title", "destinations.description");
+  useRecordMeta(item?.name ?? "", item ? `${item.known_for} ${labels.avoid}: ${item.avoid}` : "");
 
   if (!item) {
     return (
