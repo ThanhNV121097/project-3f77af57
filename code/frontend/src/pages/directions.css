@@ -45,7 +45,7 @@
 .d1__h1 {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 500; font-size: 40px; line-height: 1.05; letter-spacing: -0.025em;
-  margin: 14px 0 9px; max-width: 18ch;
+  margin: 12px 0 8px; max-width: 24ch;
 }
 .d1__sub { font-size: 13.5px; line-height: 1.5; color: #6B675C; max-width: 56ch; }
 .d1__head {
