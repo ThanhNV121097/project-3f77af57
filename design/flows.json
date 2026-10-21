@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Twelve days, mountains",
+    "steps": [
+      { "action": "open", "path": "/" },
+      { "action": "click", "selector": "[data-testid='see-all-fourteen']" },
+      { "action": "click", "selector": "[data-testid='filter-kind-mountains']" },
+      { "action": "expect", "selector": "[data-testid='filter-total']", "text": "days" }
+    ]
+  },
+  {
+    "name": "Read one destination",
+    "steps": [
+      { "action": "open", "path": "/destinations" },
+      { "action": "click", "selector": "[data-testid='row-ha-giang']" },
+      { "action": "expect", "selector": "[data-testid='avoid-line']", "text": "Avoid" }
+    ]
+  },
+  {
+    "name": "Send a message",
+    "steps": [
+      { "action": "open", "path": "/contact" },
+      { "action": "type", "selector": "#contact-name", "value": "Lan" },
+      { "action": "type", "selector": "#contact-reply", "value": "lan@example.com" },
+      { "action": "type", "selector": "#contact-message", "value": "Twelve days in March, north only. Where would you go?" },
+      { "action": "expect", "selector": "[data-testid='contact-send']", "text": "Send" }
+    ]
+  },
+  {
+    "name": "Sign up for the letter",
+    "steps": [
+      { "action": "open", "path": "/letter" },
+      { "action": "type", "selector": "#letter-email", "value": "lan@example.com" },
+      { "action": "click", "selector": "[data-testid='letter-send']" },
+      { "action": "expect", "selector": "[data-testid='letter-done']", "text": "letter" }
+    ]
+  },
+  {
+    "name": "Find where they are",
+    "steps": [
+      { "action": "open", "path": "/" },
+      { "action": "click", "selector": "[data-testid='nav-contact']" },
+      { "action": "expect", "selector": "[data-testid='contact-address']", "text": "Nhà Chung" }
+    ]
+  }
+]

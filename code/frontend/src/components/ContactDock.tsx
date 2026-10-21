@@ -34,7 +34,7 @@ export default function ContactDock() {
       )}
       {tel && (
         <a href={`tel:${tel}`} aria-label={callLabel}
-          className="pointer-events-auto flex h-14 w-14 items-center justify-center rounded-full bg-accent text-accent-ink shadow-lg">
+          className="pointer-events-auto flex h-14 w-14 items-center justify-center rounded-full bg-surface text-ink shadow-lg ring-1 ring-line">
           <Icon name="phone" />
         </a>
       )}

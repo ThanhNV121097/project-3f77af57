@@ -1,0 +1,7 @@
+[
+  { "id": "coast-islands", "name": "Coast and islands", "note": "Beaches, bays and the boats out to them", "_source": "assumed" },
+  { "id": "mountains", "name": "Mountains", "note": "Passes, terraces and hill towns", "_source": "assumed" },
+  { "id": "heritage-towns", "name": "Heritage towns", "note": "Old quarters you can walk in a morning", "_source": "assumed" },
+  { "id": "countryside", "name": "Countryside", "note": "Rice, tea and limestone, at a slow pace", "_source": "assumed" },
+  { "id": "national-parks", "name": "National parks", "note": "Forest, caves and protected water", "_source": "assumed" }
+]

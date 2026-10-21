@@ -1,0 +1,5 @@
+[
+  { "id": "north", "name": "North", "note": "Hà Nội, the northeast bays, the northwest mountains", "_source": "assumed" },
+  { "id": "centre", "name": "Centre", "note": "Quảng Trị down to Bình Định", "_source": "assumed" },
+  { "id": "south", "name": "South", "note": "The highlands, the southeast coast and the islands", "_source": "assumed" }
+]

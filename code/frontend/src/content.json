@@ -1,55 +1,151 @@
 {
   "site": {
-    "name": "Your business",
+    "name": "Đi Ngược",
     "logo": "",
-    "description": "One sentence on what the business is, for search results and shared links.",
-    "locale": "vi-VN"
+    "description": "Fourteen places in Vietnam, with the best months, how to get there and how long to stay — and the months to stay away.",
+    "locale": "vi-VN",
+    "defaultMode": "dark"
   },
   "nav": {
     "links": [
-      {
-        "label": "Home",
-        "href": "/"
-      }
+      { "label": "All fourteen", "href": "/destinations" },
+      { "label": "Pictures", "href": "/pictures" },
+      { "label": "Who we are", "href": "/about" },
+      { "label": "The letter", "href": "/letter" }
     ],
-    "cta": {
-      "label": "Get in touch",
-      "href": "#contact"
+    "cta": { "label": "Write to us", "href": "/contact" },
+    "menu": { "open": "Open menu", "close": "Close menu" }
+  },
+  "home": {
+    "eyebrow": "A guide to fourteen places in Vietnam",
+    "headline": "We will also tell you when not to come.",
+    "sub": "Nine years, fourteen places, both of us to all of them. Best months, nearest airport, how long to stay — and the weeks the rain closes the pass.",
+    "cta": { "label": "See all fourteen", "href": "/destinations" },
+    "warnings": {
+      "label": "Stay away in",
+      "heading": "Four places, and their bad months",
+      "note": "Filled cells are the months we would not go. The whole guide is drawn this way."
     },
-    "theme": {
-      "toLight": "Switch to light mode",
-      "toDark": "Switch to dark mode"
+    "kinds": {
+      "label": "By the kind of place",
+      "heading": "Five kinds of trip",
+      "note": "Mountains, coast, old towns, countryside, parks. Pick one and the list narrows."
     },
-    "menu": {
-      "open": "Open menu",
-      "close": "Close menu"
+    "letter": {
+      "label": "Monthly",
+      "heading": "One letter a month",
+      "sub": "Where it is dry next month, where it is not, and what has changed on the ground since we last went.",
+      "cta": "Sign up for the letter"
     }
   },
-  "hero": {
-    "eyebrow": "",
-    "headline": "A headline of a few words",
-    "sub": "One line under it, and no more.",
-    "cta": {
-      "label": "Get in touch",
-      "href": "#contact"
-    }
+  "destinations": {
+    "title": "All fourteen",
+    "description": "Every place in the guide, with its region, its kind, its best months, its nearest airport and the days we would give it.",
+    "eyebrow": "The whole country",
+    "headline": "All fourteen, on one page.",
+    "sub": "Narrow by region or by the kind of place. The days add up as you filter.",
+    "filters": {
+      "region": "Region",
+      "kind": "Kind of place",
+      "all": "All",
+      "clear": "Clear filters",
+      "places": "places",
+      "days": "days",
+      "empty": "No place matches both filters. Clear one and try again."
+    },
+    "columns": {
+      "place": "Place",
+      "months": "Twelve months",
+      "best": "Best",
+      "airport": "From",
+      "km": "Km",
+      "hours": "Hours",
+      "days": "Days"
+    },
+    "more": "Show more"
   },
-  "footer": {
-    "line": "Your business · District 1, Saigon"
+  "destination": {
+    "back": "All fourteen",
+    "avoid": "Avoid",
+    "known": "What it is known for",
+    "best": "Best months",
+    "getting": "Getting there",
+    "stay": "How long to stay",
+    "opinion": "Our opinion",
+    "months": "The year, month by month",
+    "months_note": "Filled cells are the months we would not go.",
+    "nearby": "Elsewhere in the same region",
+    "notfound": {
+      "heading": "We have no page for that place.",
+      "sub": "It may have been renamed. The full list is here.",
+      "cta": "See all fourteen"
+    },
+    "figures": { "airport": "Nearest airport", "distance": "Distance", "hours": "Travel time", "days": "Days" },
+    "units": { "km": "km", "h": "h", "d": "d", "days": "days" }
   },
-  "credits": {
-    "label": "Photos"
+  "pictures": {
+    "title": "Pictures",
+    "description": "One photograph from each of the fourteen places in the guide.",
+    "eyebrow": "Fourteen places",
+    "headline": "One picture each.",
+    "sub": "One picture for each place, until our own are up here. Click one to read the place.",
+    "count": "places",
+    "missing": "A photograph the owners took here"
+  },
+  "about": {
+    "title": "Who we are",
+    "description": "Two people, nine years, and every one of the fourteen places in this guide walked in person.",
+    "eyebrow": "Who we are",
+    "headline": "Two of us, nine years, all fourteen.",
+    "sub": "We started writing this down because every guide we read told us when to come and none of them told us when not to.",
+    "story": {
+      "label": "How it works",
+      "heading": "We go, then we write it down.",
+      "body": "Every entry here is a place we have both been to. The months come from being there in the wrong one at least once. Where a thing is a matter of taste — how long to stay, which end of an island to sleep on — we say so and sign our name to it.",
+      "body2": "We do not sell trips and we take no commission on anything you book. If a place is not worth your fortnight we would rather say so than fill a page."
+    },
+    "walked": { "label": "All fourteen, both of us" },
+    "team": { "label": "The two of us", "heading": "The people who went", "empty": "A name, a photograph and a few lines — the owners add these." },
+    "voices": { "label": "Readers", "heading": "What readers tell us", "empty": "A line from a reader who used the guide — the owners add these once they have them." }
+  },
+  "letter": {
+    "title": "The monthly letter",
+    "description": "One letter a month: where it is dry, where it is not, and what has changed on the ground.",
+    "eyebrow": "The monthly letter",
+    "headline": "Where to go next month.",
+    "sub": "One letter, on the first of the month. Which of the fourteen is in its good months, which is not, and anything that has changed since we were last there.",
+    "email": "Your email",
+    "send": "Sign up",
+    "sending": "Signing up…",
+    "done": "You are on the list. The letter goes out on the first of the month.",
+    "promise": "One letter a month. Nothing else, and no sharing of your address.",
+    "away": {
+      "label": "Stay away this month, in",
+      "none": "None of the fourteen is in a bad month this month. Anywhere on the list is fair.",
+      "rest": "Fair this month"
+    },
+    "sample": { "label": "What is in it", "heading": "A letter is four lines", "items": [
+      { "line": "The three places in their best month, and why." },
+      { "line": "The one place to stay away from, and for how long." },
+      { "line": "One road, ferry or pass that has changed." },
+      { "line": "One thing we got wrong last month." }
+    ] }
   },
   "contact": {
-    "phone": "",
+    "title": "Write to us",
+    "description": "Send us a message, or come and find us at 27 Nhà Chung, Hoàn Kiếm, Hà Nội.",
+    "eyebrow": "Write to us",
+    "headline": "Tell us how long you have.",
+    "sub": "Days, the month you are coming and what you like. We answer in the order the messages arrive.",
+    "detailsLabel": "Where we are",
+    "mapLabel": "27 Nhà Chung on the map",
+    "phone": "+84 24 3824 1515",
     "zalo": "",
-    "email": "",
-    "address": "",
-    "hours": "",
-    "dock": {
-      "call": "Call us",
-      "zalo": "Message us on Zalo"
-    },
+    "email": "xinchao@dinguoc.vn",
+    "address": "27 Nhà Chung, Hoàn Kiếm, Hà Nội",
+    "hours": "Mon–Fri 9:00–18:00",
+    "labels": { "phone": "Phone", "email": "Email", "address": "Address", "hours": "Open" },
+    "dock": { "call": "Call us", "zalo": "Message us on Zalo" },
     "form": {
       "name": "Your name",
       "reply_to": "Phone or email",
@@ -57,8 +153,20 @@
       "send": "Send",
       "sending": "Sending…",
       "sent": "Thank you — we have your message and will answer soon.",
-      "offline": "This form is not connected yet — call or message us instead.",
-      "fields": {}
+      "offline": "This form is not connected yet — call or email us instead.",
+      "fields": { "days": "How many days you have", "month": "The month you are coming" }
     }
+  },
+  "footer": {
+    "guide": "The guide",
+    "about": "About",
+    "reach": "Reach us",
+    "line": "We sell nothing and take no bookings. Every place here is one we went to.",
+    "letter": "The monthly letter"
+  },
+  "credits": { "label": "Photos" },
+  "months": {
+    "short": ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"],
+    "long": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
   }
 }

@@ -1,0 +1,9 @@
+[
+  { "path": "/", "name": "Home" },
+  { "path": "/destinations", "name": "All fourteen" },
+  { "path": "/destinations/:id", "name": "Destination", "example": "/destinations/ha-giang" },
+  { "path": "/pictures", "name": "Pictures" },
+  { "path": "/about", "name": "Who we are" },
+  { "path": "/letter", "name": "The monthly letter" },
+  { "path": "/contact", "name": "Contact" }
+]
