@@ -20,6 +20,9 @@ export default function About() {
   const { items: walked } = useCollection<{ id: string; name: string; days: number }>("destinations", { pageSize: 14 });
   const t = useContent<Record<string, string>>("about.team");
   const v = useContent<Record<string, string>>("about.voices");
+  // Only the lines a reader actually sent. Empty rows wait in the Studio;
+  // repeating the waiting sentence three times reads as a stutter, not a plan.
+  const said = voices.filter((q) => q.quote.trim() !== "");
 
   return (
     <div className="mx-auto max-w-page px-[var(--gutter)] py-12">
