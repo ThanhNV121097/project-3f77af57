@@ -200,13 +200,13 @@
     "best_note": "The dry season: cold mornings, clear afternoons, and the hills around the town are walkable.",
     "avoid": "June to September. The afternoon rain is reliable and heavy, and it takes the view with it.",
     "avoid_months": [6, 7, 8, 9],
-    "getting_there": "Liên Khương (DLI) is 30 km south, about 40 minutes up the pass. From Hồ Chí Minh City it is 300 km, 7 hours by bus.",
+    "getting_there": "Liên Khương (DLI), in Đức Trọng, is 30 km south of the town — about 40 minutes up the Prenn pass. From Hồ Chí Minh City by road it is some 300 km, 7 hours by bus.",
     "airport": "Liên Khương (DLI)",
     "distance_km": 30,
     "hours": 0.75,
     "days": 3,
     "opinion": "Skip the attractions in the town. The farms and the pass roads are why you came.",
-    "_source": "assumed"
+    "_source": "web:https://en.wikipedia.org/wiki/Lien_Khuong_International_Airport"
   },
   {
     "id": "mui-ne",
