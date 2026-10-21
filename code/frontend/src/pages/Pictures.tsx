@@ -26,7 +26,7 @@ export default function Pictures() {
         <p className="figures mt-4 text-sm text-ink-soft">{total}</p>
       </div>
 
-      <ul className="mt-10 grid grid-cols-1 gap-px bg-[var(--line)] sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="mt-10 grid grid-cols-1 gap-px bg-[var(--line)] sm:grid-cols-2">
         {items.map((d, i) => (
           <li key={d.id} data-record={`destinations:${d.id}`} className="bg-ground">
             <Reveal delay={(i % 3) * 0.06}>
