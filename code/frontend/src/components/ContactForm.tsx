@@ -50,12 +50,12 @@ export default function ContactForm({ fields = [], className = "" }: { fields?: 
   const input = "w-full rounded border border-field bg-ground px-4 py-3 text-ink";
   return (
     <form onSubmit={(e) => void submit(e)} className={`flex flex-col gap-4 ${className}`}>
-      <Field k="name"><input name="name" autoComplete="name" required className={input} /></Field>
-      <Field k="reply_to"><input name="reply_to" autoComplete="tel" required className={input} /></Field>
+      <Field k="name" htmlFor="contact-name"><input id="contact-name" name="name" autoComplete="name" required className={input} /></Field>
+      <Field k="reply_to" htmlFor="contact-reply"><input id="contact-reply" name="reply_to" autoComplete="tel" required className={input} /></Field>
       {fields.map((f) => (
-        <Field key={f.key} k={`fields.${f.key}`}><input name={f.key} type={f.type ?? "text"} className={input} /></Field>
+        <Field key={f.key} k={`fields.${f.key}`} htmlFor={`contact-${f.key}`}><input id={`contact-${f.key}`} name={f.key} type={f.type ?? "text"} className={input} /></Field>
       ))}
-      <Field k="message"><textarea name="message" rows={4} className={input} /></Field>
+      <Field k="message" htmlFor="contact-message"><textarea id="contact-message" name="message" rows={4} className={input} /></Field>
       <input name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[9999px] h-px w-px opacity-0" />
       {state === "failed" && <p role="alert" className="text-sm text-ink">{problem}</p>}
       {!canSend && <p className="text-sm text-ink-soft">{offline}</p>}
