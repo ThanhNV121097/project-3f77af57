@@ -137,7 +137,7 @@ export default function Home() {
       </section>
 
       {/* The letter. */}
-      <section className="mt-20 border-y border-line bg-surface">
+      <section className="mt-20 border-t border-line bg-surface">
         <Reveal className="mx-auto max-w-page px-[var(--gutter)] py-14 lg:grid lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-3">
             <T k="home.letter.label" as="p" className="label text-ink-soft" />
