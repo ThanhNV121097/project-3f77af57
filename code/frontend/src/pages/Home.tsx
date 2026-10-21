@@ -30,7 +30,7 @@ export default function Home() {
     <>
       {/* COMMITMENT 1: four photographs edge to edge, touching, no container. */}
       <section className="border-b border-line">
-        <div className="grid grid-cols-2 lg:h-[46vh] lg:min-h-[300px] lg:grid-cols-6">
+        <div className="grid grid-cols-2 lg:h-[40vh] lg:min-h-[280px] lg:grid-cols-6">
           {band.map((d, i) => (
             <Link
               key={d.id}
