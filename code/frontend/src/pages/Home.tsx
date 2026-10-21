@@ -10,6 +10,16 @@ import { Picture } from "../picture";
 /** The four places across the top band, in the order the first screen shows them. */
 const BAND = ["ha-giang", "hoi-an", "con-dao", "moc-chau"];
 
+/** "Jun–Aug" from the month numbers, in the content's own month letters. */
+function monthRange(avoid: number[], names: string[]): string {
+  if (avoid.length === 0) return "";
+  const full = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  void names;
+  const first = full[avoid[0] - 1];
+  const last = full[avoid[avoid.length - 1] - 1];
+  return avoid.length === 1 ? first : `${first}–${last}`;
+}
+
 export default function Home() {
   const { items } = useCollection<Destination>("destinations", { pageSize: 14 });
   const { items: kindRows } = useCollection<Facet>("kinds", { pageSize: 5 });
