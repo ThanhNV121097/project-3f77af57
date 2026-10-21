@@ -76,7 +76,7 @@ export default function Destinations() {
 
       {!loading && shown.length > 0 && (
         <>
-          <div className="mt-6 hidden grid-cols-[1fr_200px_104px_64px_56px_56px] gap-6 border-b border-line pb-2 lg:grid">
+          <div className="mt-6 hidden grid-cols-[1fr_200px_104px_56px_56px_56px] gap-6 border-b border-line pb-2 lg:grid">
             <span className="label text-ink-soft">{cols.place}</span>
             <span className="label text-ink-soft">{cols.months}</span>
             <span className="label text-ink-soft">{cols.airport}</span>
