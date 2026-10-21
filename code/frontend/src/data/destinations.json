@@ -143,13 +143,13 @@
     "best_note": "The only reliably dry stretch of the year here, and the tombs are walkable before the heat.",
     "avoid": "September to December. Huế is the wettest city in Vietnam and in October and November the river comes over the bank.",
     "avoid_months": [9, 10, 11, 12],
-    "getting_there": "Phú Bài (HUI) is 15 km from the citadel, about 25 minutes. From Đà Nẵng the train over the Hải Vân pass takes about 2 hours 30 and is worth taking for its own sake.",
+    "getting_there": "Phú Bài (HUI) sits in the southeast of the city, about 15 km from the citadel — 25 minutes by road. From Đà Nẵng the train over the Hải Vân pass takes about 2 hours 30 and is worth taking for its own sake.",
     "airport": "Phú Bài (HUI)",
     "distance_km": 15,
     "hours": 0.5,
     "days": 2,
     "opinion": "Two days, and give one of them to the tombs rather than the citadel.",
-    "_source": "assumed"
+    "_source": "web:https://en.wikipedia.org/wiki/Phu_Bai_International_Airport"
   },
   {
     "id": "hoi-an",
