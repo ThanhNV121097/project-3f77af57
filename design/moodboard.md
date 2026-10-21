@@ -36,7 +36,8 @@ signal yellow used for one thing only — the months to stay away. Photographs o
 Vietnam are overwhelmingly green, blue and gold; set on jade they read as the same
 country rather than fourteen postcards from fourteen stock libraries.
 
-**Faces.** Display **Bricolage Grotesque 500** (Google Fonts, OFL) — graphic, slightly
+**Faces.** The chosen display face is a **sans**, not a serif or an italic display face:
+house style holds. Display **Bricolage Grotesque 500** (Google Fonts, OFL) — graphic, slightly
 irregular, reads as a printed notice rather than a brochure, and carries diacritics
 (Hạ, Mộc, Nhơn) without breaking. Body **Inter**. Figures everywhere are tabular:
 distances, hours, days and the month grid all line up in columns.
