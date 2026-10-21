@@ -21,6 +21,24 @@ export function usePageMeta(titleKey: string, descriptionKey?: string) {
   }, [title, description, name]);
 }
 
+/**
+ * The same, for a page whose title is a record rather than a content key —
+ * a destination's own name. Pass empty strings while the record is loading
+ * and the page keeps the site's own title.
+ */
+export function useRecordMeta(title: string, description: string) {
+  const name = useContent("site.name");
+  const fallback = useContent("site.description");
+  useEffect(() => {
+    const full = title ? `${title} — ${name}` : name;
+    if (full) document.title = full;
+    const d = description || fallback;
+    setMeta("name", "description", d);
+    setMeta("property", "og:title", full);
+    setMeta("property", "og:description", d);
+  }, [title, description, name, fallback]);
+}
+
 function setMeta(attr: "name" | "property", key: string, value: string) {
   if (!value) return;
   let el = document.head.querySelector<HTMLMetaElement>(`meta[${attr}="${key}"]`);
