@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { T, useContent, useList } from "../editable";
+import { T, useContent } from "../editable";
 import { useCollection } from "../data";
 import type { Destination, Facet } from "../lib/types";
 import MonthBar from "../components/MonthBar";
