@@ -116,13 +116,13 @@ function Footer() {
         </div>
         <nav className="flex flex-col gap-2 text-sm">
           <T k="footer.guide" className="label text-ink-soft" />
-          <Link to="/destinations" className="hover:text-accent-ink">
+          <Link to="/destinations" className="text-ink-soft hover:text-ink">
             <T k="nav.links.0.label" />
           </Link>
-          <Link to="/pictures">
+          <Link to="/pictures" className="text-ink-soft hover:text-ink">
             <T k="nav.links.1.label" />
           </Link>
-          <Link to="/letter">
+          <Link to="/letter" className="text-ink-soft hover:text-ink">
             <T k="footer.letter" />
           </Link>
         </nav>
