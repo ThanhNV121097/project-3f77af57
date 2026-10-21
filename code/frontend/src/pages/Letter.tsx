@@ -21,8 +21,10 @@ export default function Letter() {
   const sampleLabel = useContent<Record<string, string>>("letter.sample");
   const { items } = useCollection<Destination>("destinations", { pageSize: 14 });
   const thisMonth = new Date().getMonth() + 1;
-  const thisMonthBad = items.filter((d) => d.avoid_months.includes(thisMonth));
-  const bad = [...thisMonthBad, ...items.filter((d) => !thisMonthBad.includes(d))].slice(0, 6);
+  // Only the places actually in a bad month this month. The list is never
+  // padded: a warning that names a place that is fine is the one thing a
+  // guide trading on the honest half cannot do.
+  const bad = items.filter((d) => d.avoid_months.includes(thisMonth));
 
   async function submit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
