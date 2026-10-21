@@ -1,3 +1,55 @@
 {
-  "collections": {}
+  "collections": {
+    "destinations": {
+      "label": "Destinations",
+      "fields": [
+        { "key": "name", "label": "Name", "type": "text" },
+        { "key": "region", "label": "Region", "type": "ref:regions" },
+        { "key": "kind", "label": "Kind of place", "type": "ref:kinds" },
+        { "key": "image", "label": "Photograph", "type": "image" },
+        { "key": "known_for", "label": "What it is known for", "type": "longtext" },
+        { "key": "best_months", "label": "Best months", "type": "text" },
+        { "key": "best_note", "label": "Why those months", "type": "longtext" },
+        { "key": "avoid", "label": "When not to come", "type": "longtext" },
+        { "key": "avoid_months", "label": "Months to avoid (1-12)", "type": "list" },
+        { "key": "getting_there", "label": "How to get there", "type": "longtext" },
+        { "key": "airport", "label": "Nearest airport", "type": "text" },
+        { "key": "distance_km", "label": "Distance from it (km)", "type": "number" },
+        { "key": "hours", "label": "Hours from it", "type": "number" },
+        { "key": "days", "label": "Days worth spending", "type": "number" },
+        { "key": "opinion", "label": "Our opinion", "type": "longtext" }
+      ]
+    },
+    "regions": {
+      "label": "Regions",
+      "fields": [
+        { "key": "name", "label": "Name", "type": "text" },
+        { "key": "note", "label": "Note", "type": "text" }
+      ]
+    },
+    "kinds": {
+      "label": "Kinds of place",
+      "fields": [
+        { "key": "name", "label": "Name", "type": "text" },
+        { "key": "note", "label": "Note", "type": "text" }
+      ]
+    },
+    "team": {
+      "label": "Who we are",
+      "fields": [
+        { "key": "name", "label": "Name", "type": "text" },
+        { "key": "role", "label": "What they do", "type": "text" },
+        { "key": "bio", "label": "A few lines about them", "type": "longtext" },
+        { "key": "image", "label": "Photograph", "type": "image" }
+      ]
+    },
+    "voices": {
+      "label": "What readers say",
+      "fields": [
+        { "key": "quote", "label": "What they said", "type": "longtext" },
+        { "key": "who", "label": "Who said it", "type": "text" },
+        { "key": "where", "label": "Where they went", "type": "text" }
+      ]
+    }
+  }
 }
